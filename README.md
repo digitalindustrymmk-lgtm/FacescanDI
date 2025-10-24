@@ -1,1 +1,6 @@
 # FacescanDI
+
+# First open default on page (ថតរូប) then select the users and it load two options (Capture by users ) and ( Auto capture)
+# Aside ( navbar left-side ) that detail about the data of IMAGES and USERS by Classes
+# In the (Saved Images) can delete the images then it load auto delete in folder by class and in sheet also.
+# Admin User ( to be updated soon )
