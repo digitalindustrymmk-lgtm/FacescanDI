@@ -7,7 +7,7 @@
     <link rel="icon" href="https://img.freepik.com/premium-vector/face-scan-icon_933463-79729.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" xintegrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
@@ -41,12 +41,12 @@
             position: absolute; top: 50%; left: 50%; width: 100%; height: 100%;
             object-fit: cover; transform: translate(-50%, -50%) scaleX(-1);
         }
-        .video-container {
-            position: relative; border-radius: 50%; overflow: hidden;
+        .video-container { 
+            position: relative; border-radius: 50%; overflow: hidden; 
             border: 5px solid transparent; transition: all 0.4s ease;
             box-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
-        .video-container.ready {
+        .video-container.ready { 
             border-color: #4ade80; box-shadow: 0 0 25px rgba(74, 222, 128, 0.6);
         }
         .scanner-line {
@@ -91,7 +91,7 @@
         <div id="sidebar-backdrop" class="hidden md:hidden fixed inset-0 bg-black/50 z-30"></div>
 
         <aside id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-slate-800/80 backdrop-blur-lg z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col">
-
+    
     <div class="text-center py-6 mb-4">
         <img src="di_logo.png" alt="Logo" class="w-20 h-20 rounded-full mx-auto mb-2 shadow-lg">
         <h2 class="text-xl font-bold text-white khmer-title">ឧស្សាហកម្មឌីជីថល</h2>
@@ -120,7 +120,7 @@
 
     <footer class="p-4 border-t border-slate-700/50 text-slate-400 text-sm">
         <div class="flex flex-col items-center sm:flex-row sm:justify-between gap-2">
-            <p class="text-center sm:text-left">&copy; 2025 by IT Support</p>
+            <p class="text-center sm:text-left">&copy; 2025 IT Support</p>
             <div class="flex items-center gap-3">
                 <a href="#" target="_blank" class="hover:text-white transition-colors" title="Telegram">
                     <i class="fab fa-telegram fa-lg"></i>
@@ -133,44 +133,44 @@
 
         <div id="content-wrapper" class="flex flex-col flex-1 md:ml-64 transition-all duration-300 ease-in-out">
             <header class="w-full h-16 bg-slate-800/50 backdrop-blur-lg flex-shrink-0 flex items-center px-6 sticky top-0 z-20">
-                <button id="menu-btn" class="text-white mr-4 md:hidden"><i class="fas fa-bars text-xl"></i></button>
+                <button id="menu-btn" class="text-white mr-4"><i class="fas fa-bars text-xl"></i></button>
                 <h1 class="text-xl font-bold text-white khmer-title">ប្រព័ន្ធគ្រប់គ្រងទិន្នន័យរូបភាព</h1>
             </header>
-
+            
             <main class="w-full flex-1 p-4 md:p-8">
                 <div id="page-scan">
-                             <div class="main-content rounded-2xl p-6">
-                                <div class="container w-full max-w-md mx-auto relative">
-                                    <button id="back-btn" class="hidden absolute -top-2 -left-2 w-10 h-10 bg-slate-700/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-slate-600/50 transition z-20" title="Back to Selection"><i class="fas fa-arrow-left"></i></button>
-                                    <h1 class="text-center text-2xl mb-2 text-white khmer-title">ប្រព័ន្ធស្កេនមុខឌីជីថល</h1>
-                                    <p id="subtitle" class="text-center text-slate-400 mb-6">សូមជ្រើសរើសអត្តលេខរបស់អ្នក</p>
+                         <div class="main-content rounded-2xl p-6">
+                            <div class="container w-full max-w-md mx-auto relative">
+                                <button id="back-btn" class="hidden absolute -top-2 -left-2 w-10 h-10 bg-slate-700/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-slate-600/50 transition z-20" title="Back to Selection"><i class="fas fa-arrow-left"></i></button>
+                                <h1 class="text-center text-2xl mb-2 text-white khmer-title">ប្រព័ន្ធស្កេនមុខឌីជីថល</h1>
+                                <p id="subtitle" class="text-center text-slate-400 mb-6">សូមជ្រើសរើសអត្តលេខរបស់អ្នក</p>
+                                
+                                <div id="selection-area" class="mb-5">
+                                    <input type="text" id="student-search-input" placeholder="ស្វែងរកអត្តលេខ ឬឈ្មោះ..." class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4">
+                                    <ul id="student-list" class="space-y-1">
+                                         <li class="text-center text-slate-400 p-4">Loading students...</li>
+                                    </ul>
+                                </div>
 
-                                    <div id="selection-area" class="mb-5">
-                                        <input type="text" id="student-search-input" placeholder="ស្វែងរកអត្តលេខ ឬឈ្មោះ..." class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4">
-                                        <ul id="student-list" class="space-y-1">
-                                             <li class="text-center text-slate-400 p-4">Loading students...</li>
-                                        </ul>
+                                <div id="camera-section" class="hidden flex flex-col items-center space-y-4">
+                                    <div id="video-wrapper" class="video-container w-[90%] mx-auto aspect-square">
+                                        <video id="video" autoplay muted playsinline></video>
+                                        <div class="scanner-line"></div>
                                     </div>
-
-                                    <div id="camera-section" class="hidden flex flex-col items-center space-y-4">
-                                        <div id="video-wrapper" class="video-container w-[90%] mx-auto aspect-square">
-                                            <video id="video" autoplay muted playsinline></video>
-                                            <div class="scanner-line"></div>
-                                        </div>
-                                        <div class="flex items-center justify-center gap-4">
-                                            <button id="switch-camera-btn" class="hidden w-14 h-14 bg-slate-700/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-slate-600/50 transition" title="Switch Camera"><i class="fas fa-sync-alt fa-lg"></i></button>
-                                            <button id="manual-capture-btn" class="hidden w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-700 transition shadow-lg" title="Capture Photo"><i class="fas fa-camera fa-2x"></i></button>
-                                        </div>
-                                        <canvas id="capture-canvas" class="hidden"></canvas>
-                                        <img id="photo-preview" class="hidden w-[90%] mx-auto aspect-square rounded-full border-4 border-green-400 object-cover shadow-lg">
-                                        <p id="face-status" class="text-center text-sm h-5 font-semibold text-slate-400"></p>
-                                        <div class="flex flex-col w-full space-y-3">
-                                            <button id="upload-btn" class="hidden w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition shadow-lg">បញ្ជូនរូបភាព</button>
-                                            <button id="retake-btn" class="hidden w-full bg-slate-600 text-white py-3 rounded-xl font-semibold hover:bg-slate-700 transition">ថតម្តងទៀត</button>
-                                        </div>
+                                    <div class="flex items-center justify-center gap-4">
+                                        <button id="switch-camera-btn" class="hidden w-14 h-14 bg-slate-700/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-slate-600/50 transition" title="Switch Camera"><i class="fas fa-sync-alt fa-lg"></i></button>
+                                        <button id="manual-capture-btn" class="hidden w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center text-white hover:bg-indigo-700 transition shadow-lg" title="Capture Photo"><i class="fas fa-camera fa-2x"></i></button>
+                                    </div>
+                                    <canvas id="capture-canvas" class="hidden"></canvas>
+                                    <img id="photo-preview" class="hidden w-[90%] mx-auto aspect-square rounded-full border-4 border-green-400 object-cover shadow-lg">
+                                    <p id="face-status" class="text-center text-sm h-5 font-semibold text-slate-400"></p>
+                                    <div class="flex flex-col w-full space-y-3">
+                                        <button id="upload-btn" class="hidden w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition shadow-lg">បញ្ជូនរូបភាព</button>
+                                        <button id="retake-btn" class="hidden w-full bg-slate-600 text-white py-3 rounded-xl font-semibold hover:bg-slate-700 transition">ថតម្តងទៀត</button>
                                     </div>
                                 </div>
-                             </div>
+                            </div>
+                         </div>
                 </div>
 
                 <div id="page-list" class="hidden main-content rounded-2xl p-6 h-full flex flex-col">
@@ -189,7 +189,7 @@
                     <div id="list-container" class="table-container flex-1 overflow-x-auto">
                         <div id="list-loading" class="text-center py-10"><p class="text-slate-400">កំពុងទាញទិន្នន័យរូបភាពនិស្សិត...</p></div>
                         <table id="list-table" class="hidden w-full text-left text-slate-300">
-                           <thead class="bg-slate-700/50 sticky top-0"><tr><th class="p-3">ID</th><th class="p-3">ឈ្មោះ</th><th class="p-3">រូបភាព</th><th class="p-3 text-center">Status</th></tr></thead>
+                           <thead class="bg-slate-700/50 sticky top-0"><tr><th class="p-3">ID</th><th class="p-3">ឈ្មោះ</th><th class="p-3">ថ្នាក់</th><th class="p-3 text-center">Status</th></tr></thead>
                            <tbody></tbody>
                         </table>
                     </div>
@@ -215,16 +215,9 @@
 
         </div>
     </div>
-
+    
     <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal">
-      <!-- MODIFIED: Added 'relative' class -->
-      <div class="modal-content w-full max-w-sm p-6 rounded-2xl shadow-2xl text-center relative">
-
-        <!-- NEW: Added the top-left icon back button, hidden by default -->
-        <button id="modal-back-btn" class="hidden absolute top-3 left-3 w-10 h-10 bg-slate-700/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-slate-600/50 transition z-20" title="Back">
-            <i class="fas fa-arrow-left"></i>
-        </button>
-
+      <div class="modal-content w-full max-w-sm p-6 rounded-2xl shadow-2xl text-center">
         <div id="modal-icon" class="w-16 h-16 mx-auto mb-4"></div>
         <p id="modal-message" class="text-lg font-semibold text-white mb-6"></p>
         <div id="modal-buttons" class="flex flex-col sm:flex-row gap-4">
@@ -234,7 +227,7 @@
     </div>
 
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXTQvwmB9RP4Jm3P9n9F-rZRbsljMLq29HvjaOJYPtMq4dF7Tl5wxZbVeznR3ffNCz/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzq6ne8SuyYpH5-pSr_xIgW2B_ziWzZTBBVkXqbD1Ehh5N4Yg39Bdzy9eGIEb6Wlsk/exec';
     // DOM Elements
     const video = document.getElementById('video'), captureCanvas = document.getElementById('capture-canvas'),
           photoPreview = document.getElementById('photo-preview'), uploadBtn = document.getElementById('upload-btn'),
@@ -244,17 +237,16 @@
           backBtn = document.getElementById('back-btn'), modal = document.getElementById('modal'),
           modalIcon = document.getElementById('modal-icon'), modalMessage = document.getElementById('modal-message'),
           modalButtons = document.getElementById('modal-buttons'),
-          modalBackBtn = document.getElementById('modal-back-btn'), // <-- ADDED THIS
-          manualCaptureBtn = document.getElementById('manual-capture-btn');
+          manualCaptureBtn = document.getElementById('manual-capture-btn'); // New button
 
     const pageScan = document.getElementById('page-scan'), pageRecords = document.getElementById('page-records'), pageList = document.getElementById('page-list'),
           navScan = document.getElementById('nav-scan'), navRecords = document.getElementById('nav-records'), navList = document.getElementById('nav-list'),
           sidebar = document.getElementById('sidebar'), menuBtn = document.getElementById('menu-btn'), sidebarBackdrop = document.getElementById('sidebar-backdrop');
-
+          
     const selectionArea = document.getElementById('selection-area');
     const studentSearchInput = document.getElementById('student-search-input');
     const studentList = document.getElementById('student-list');
-
+    
     const recordsLoading = document.getElementById('records-loading'), recordsTable = document.getElementById('records-table'),
           recordsClassFilter = document.getElementById('records-class-filter'), recordsSearchInput = document.getElementById('records-search-input');
 
@@ -273,25 +265,14 @@
     };
 
     let studentsData = [], savedRecordsData = [], allStudentsListData = [], currentStream, faceApiInterval, stableFrames = 0, currentFacingMode = 'user', selectedStudent = null, currentCameraMode = 'auto';
-
+    
+    // MODIFIED: More flexible showModal to handle multiple custom buttons
     function showModal(type, message, actions = {}) {
         modalIcon.innerHTML = icons[type];
         modalMessage.textContent = message;
         modal.classList.remove('hidden');
         modalButtons.innerHTML = '';
-
-        // NEW: Show/hide the top-left back button based on modal type
-        if (type === 'choice') {
-            modalBackBtn.classList.remove('hidden');
-            modalBackBtn.onclick = () => modal.classList.add('hidden');
-        } else {
-            modalBackBtn.classList.add('hidden');
-        }
-
-        if (type === 'loading') {
-            modalBackBtn.classList.add('hidden'); // Ensure it's hidden for loading
-            return;
-        }
+        if (type === 'loading') return;
 
         if (Object.keys(actions).length > 0) {
             for (const [btnText, action] of Object.entries(actions)) {
@@ -312,15 +293,10 @@
              modalButtons.appendChild(closeBtn);
         }
     }
-
+    
     async function loadModels() {
-      // MODIFIED: Changed from './weights' to the full CDN URL
-      const MODEL_URL = 'https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@0.22.2/weights';
-      await Promise.all([
-          faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
-          faceapi.nets.faceLandmark68TinyNet.loadFromUri(MODEL_URL),
-          faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL)
-      ]);
+      const MODEL_URL = './models';
+      await Promise.all([ faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL), faceapi.nets.faceLandmark68TinyNet.loadFromUri(MODEL_URL), faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL) ]);
     }
 
     async function fetchStudents() {
@@ -334,13 +310,13 @@
         populateStudentList();
       } catch (e) { showModal('error', `Could not fetch student data: ${e.message}`); }
     }
-
+    
     function populateStudentList(filter = '') {
         studentList.innerHTML = '';
         const lowerCaseFilter = filter.toLowerCase();
         const filteredStudents = studentsData.filter(s => (s[0] || '').toString().toLowerCase().includes(lowerCaseFilter) || (s[1] || '').toLowerCase().includes(lowerCaseFilter));
         if (filteredStudents.length === 0) { studentList.innerHTML = `<li class="text-center text-slate-400 p-4">No students found.</li>`; return; }
-
+        
         filteredStudents.forEach(s => {
             const li = document.createElement('li');
             li.className = 'p-3 rounded-lg cursor-pointer transition flex justify-between items-center';
@@ -350,10 +326,10 @@
             if (uploadCount > 0) {
                 li.style.pointerEvents = 'none'; li.style.opacity = '0.7'; li.style.color = '#4ade80';
             } else {
-                // MODIFIED: Changed back to call showCameraModeSelection
-                li.onclick = () => {
-                    selectedStudent = s;
-                    showCameraModeSelection();
+                // MODIFIED: Show camera mode selection instead of starting camera directly
+                li.onclick = () => { 
+                    selectedStudent = s; 
+                    showCameraModeSelection(); 
                 };
             }
             li.innerHTML = `<span>${s[0]} - ${s[1]}</span>` + countIndicator;
@@ -361,7 +337,7 @@
         });
     }
 
-    // ADDED: The function is back, but without the text "Back" button
+    // NEW: Function to show the camera mode choice modal
     function showCameraModeSelection() {
         showModal('choice', 'សូមជ្រើសរើសប្រតិបត្តិកាមេរ៉ា', {
             'ថតរូបស្វ័យប្រវត្តិ': {
@@ -380,7 +356,7 @@
         filterElement.innerHTML = '<option value="all">All Classes</option>';
         classes.sort().forEach(c => filterElement.innerHTML += `<option value="${c}">${c}</option>`);
     }
-
+    
     function filterRecordsTable() {
         const selectedClass = recordsClassFilter.value;
         const searchTerm = recordsSearchInput.value.toLowerCase();
@@ -446,15 +422,13 @@
             recordsTable.classList.remove('hidden');
         } catch(e) { recordsLoading.innerHTML = `<p class="text-red-400">Error: ${e.message}</p>`; }
     }
-
+    
     function populateListClassFilterV2() {
         const classes = [...new Set(allStudentsListData.map(s => s[2]).filter(Boolean))];
         listClassFilter.innerHTML = '<option value="all">All Students</option>';
         listClassFilter.innerHTML += '<option value="with_photos">With Photos</option>';
-        // FIXED: Changed 'filterElement' to 'listClassFilter'
         classes.sort().forEach(c => listClassFilter.innerHTML += `<option value="${c}">${c}</option>`);
     }
-
 
     function filterStudentListTable() {
         const selectedFilter = listClassFilter.value;
@@ -462,7 +436,7 @@
         const tbody = listTable.querySelector('tbody');
         tbody.innerHTML = '';
         const imageUrlMap = new Map(savedRecordsData.map(r => [r[2], r[5]]));
-
+        
         let studentsToDisplay;
         if (selectedFilter === 'all') {
             studentsToDisplay = allStudentsListData;
@@ -472,8 +446,8 @@
             studentsToDisplay = allStudentsListData.filter(s => s[2] === selectedFilter);
         }
 
-        studentsToDisplay = studentsToDisplay.filter(s =>
-            (s[0] || '').toString().toLowerCase().includes(searchTerm) ||
+        studentsToDisplay = studentsToDisplay.filter(s => 
+            (s[0] || '').toString().toLowerCase().includes(searchTerm) || 
             (s[1] || '').toLowerCase().includes(searchTerm)
         );
 
@@ -484,7 +458,7 @@
             studentsToDisplay.forEach(student => {
                 const hasImage = student[4] > 0;
                 const imageUrl = hasImage ? imageUrlMap.get(student[0].toString()) : null;
-                const imageCell = imageUrl
+                const imageCell = imageUrl 
                     ? `<a href="${imageUrl}" target="_blank" rel="noopener noreferrer" class="relative block w-12 h-12 group rounded-lg overflow-hidden mx-auto"><img src="${imageUrl}" class="w-full h-full object-cover" alt="Student photo"></a>`
                     : '<span class="text-slate-500">-</span>';
 
@@ -508,29 +482,22 @@
                 savedRecordsData = data.slice(1);
             } catch (e) { console.error("Could not pre-fetch records for images:", e); }
         }
-
-        listTable.querySelector('thead tr').innerHTML = '<th class="p-3">ID</th><th class="p-3">ឈ្មោះ</th><th class="p-3">រូបភាព</th><th class="p-3 text-center">Status</th>';
+        
         populateListClassFilterV2();
         filterStudentListTable();
         listLoading.style.display = 'none'; listTable.classList.remove('hidden');
     }
 
+    // MODIFIED: Accepts a 'mode' ('auto' or 'manual')
     async function startCamera(facingMode = 'user', mode = 'auto') {
         currentFacingMode = facingMode;
-        currentCameraMode = mode;
+        currentCameraMode = mode; // Store the current mode for retakes
         subtitle.textContent = `Scanning for: ${selectedStudent[1]}`;
         cameraSection.classList.remove('hidden'); selectionArea.classList.add('hidden');
         switchCameraBtn.classList.remove('hidden'); backBtn.classList.remove('hidden');
-        stopCamera();
+        stopCamera(); 
         try {
-            const constraints = {
-                video: {
-                    facingMode,
-                    width: { ideal: 1920 },
-                    height: { ideal: 1080 }
-                }
-            };
-            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode, width: 640, height: 480 } });
             currentStream = stream;
             video.srcObject = stream;
             video.onloadedmetadata = () => {
@@ -544,102 +511,48 @@
                     videoWrapper.classList.remove('ready');
                 }
             };
-        } catch (err) {
-            // MODIFIED: Added a specific fallback for manual mode if auto fails
-            if(mode === 'auto') {
-                showModal('error', 'Auto-scan camera failed. Please try Manual Capture.', {
-                    'Try Manual Capture': {
-                        callback: () => startCamera(facingMode, 'manual'),
-                        className: "w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
-                    },
-                    'Cancel': {
-                        callback: () => resetToSelection(),
-                        className: "w-full bg-slate-600 text-white py-3 rounded-lg font-semibold hover:bg-slate-700 transition"
-                    }
-                });
-            } else {
-                showModal('error', 'Could not start camera. Please check permissions.');
-                resetToSelection();
-            }
-        }
+        } catch (err) { showModal('error', 'Please allow camera access.'); resetToSelection(); }
     }
 
     async function detectFace() {
-        const options = new faceapi.TinyFaceDetectorOptions({ inputSize: 224, scoreThreshold: 0.5 });
-        clearInterval(faceApiInterval);
-        faceApiInterval = setInterval(async () => {
-            const result = await faceapi.detectSingleFace(video, options).withFaceLandmarks(true);
-
-            if (result && result.score > 0.7) {
-                const landmarks = result.landmarks;
-                const nose = landmarks.getNose()[3];
-                const leftEyeInner = landmarks.getLeftEye()[3];
-                const rightEyeInner = landmarks.getRightEye()[0];
-                const faceBox = result.detection.box;
-
-                const videoCenterX = video.videoWidth / 2;
-                const faceCenterX = faceBox.x + faceBox.width / 2;
-                const centerOffset = Math.abs(faceCenterX - videoCenterX) / video.videoWidth;
-                const isCentered = centerOffset < 0.25;
-
-                const eyeCenterX = (leftEyeInner.x + rightEyeInner.x) / 2;
-                const poseOffset = Math.abs(nose.x - eyeCenterX) / faceBox.width;
-                const isStraight = poseOffset < 0.15;
-
-                const isGoodSize = faceBox.width / video.videoWidth > 0.35;
-
-                if (isCentered && isStraight && isGoodSize) {
-                    stableFrames++;
-                    faceStatus.textContent = `ល្អណាស់! (${stableFrames}/4)`;
-                    faceStatus.classList.add('text-green-400'); videoWrapper.classList.add('ready');
-                    if (stableFrames >= 4) captureFace();
-                } else {
-                    stableFrames = 0;
-                    videoWrapper.classList.remove('ready');
-                    faceStatus.classList.remove('text-green-400');
-                    if (!isGoodSize) faceStatus.textContent = "សូមរំកិលមកជិត";
-                    else if (!isCentered) faceStatus.textContent = "សូមតម្រង់មុខអ្នកចំកណ្តាល";
-                    else if (!isStraight) faceStatus.textContent = "សូមសម្លឹងមើលកាមេរ៉ាអោយចំ";
-                }
-            } else {
-                stableFrames = 0;
-                faceStatus.textContent = "សូមតម្រង់មុខអ្នកចំកណ្តាល";
-                faceStatus.classList.remove('text-green-400'); videoWrapper.classList.remove('ready');
-            }
-        }, 400);
+      const options = new faceapi.TinyFaceDetectorOptions({ inputSize: 224, scoreThreshold: 0.5 });
+      clearInterval(faceApiInterval);
+      faceApiInterval = setInterval(async () => {
+        const result = await faceapi.detectSingleFace(video, options);
+        if (result && result.score > 0.7) {
+          stableFrames++;
+          faceStatus.textContent = `Excellent! (${stableFrames}/4)`;
+          faceStatus.classList.add('text-green-400'); videoWrapper.classList.add('ready');
+          if (stableFrames >= 4) captureFace();
+        } else {
+          stableFrames = 0;
+          faceStatus.textContent = "Please center your face";
+          faceStatus.classList.remove('text-green-400'); videoWrapper.classList.remove('ready');
+        }
+      }, 400);
     }
-
 
     function captureFace() {
         clearInterval(faceApiInterval);
         const ctx = captureCanvas.getContext('2d');
-
-        const size = 1080;
+        const size = 512;
         captureCanvas.width = size; captureCanvas.height = size;
-
+        
+        // Flip context if using front camera for a non-mirrored image
         if (currentFacingMode === 'user') {
-            ctx.translate(size, 0);
+            ctx.translate(size, 0); 
             ctx.scale(-1, 1);
         }
 
         const vRatio = video.videoWidth / video.videoHeight;
         let sx=0, sy=0, sWidth=video.videoWidth, sHeight=video.videoHeight;
-        if (vRatio > 1) {
-            sHeight = video.videoHeight;
-            sWidth = sHeight;
-            sx = (video.videoWidth - sWidth) / 2;
-        } else {
-            sWidth = video.videoWidth;
-            sHeight = sWidth;
-            sy = (video.videoHeight - sHeight) / 2;
-        }
-
+        if (vRatio > 1) { sWidth = sHeight; sx = (video.videoWidth - sWidth) / 2; } 
+        else { sHeight = sWidth; sy = (video.videoHeight - sHeight) / 2; }
         ctx.drawImage(video, sx, sy, sWidth, sHeight, 0, 0, size, size);
-
-        photoPreview.src = captureCanvas.toDataURL('image/jpeg', 0.85);
+        photoPreview.src = captureCanvas.toDataURL('image/jpeg', 0.9);
         stopCamera();
         switchCameraBtn.classList.add('hidden'); videoWrapper.classList.add('hidden');
-        manualCaptureBtn.classList.add('hidden');
+        manualCaptureBtn.classList.add('hidden'); // Hide manual button
         photoPreview.classList.remove('hidden'); uploadBtn.classList.remove('hidden');
         retakeBtn.classList.remove('hidden'); faceStatus.classList.add('hidden');
         subtitle.textContent = "Confirm your photo";
@@ -659,19 +572,18 @@
         videoWrapper.classList.remove('hidden'); selectionArea.classList.remove('hidden');
         subtitle.textContent = "Select your ID or Name"; selectedStudent = null;
     }
-
+    
     uploadBtn.onclick = async () => {
         if (!selectedStudent) { showModal('error', 'Could not find student data.'); return; }
-
-        const imageData = captureCanvas.toDataURL('image/jpeg', 0.85).split(',')[1];
+        const imageData = captureCanvas.toDataURL('image/jpeg', 0.9).split(',')[1];
         showModal('loading', 'Uploading...');
         try {
             const res = await fetch(SCRIPT_URL, {
                 method: 'POST',
-                body: JSON.stringify({
-                    id: selectedStudent[0], name: selectedStudent[1],
+                body: JSON.stringify({ 
+                    id: selectedStudent[0], name: selectedStudent[1], 
                     class: selectedStudent[2], group: selectedStudent[3],
-                    imageData
+                    imageData 
                 }),
                 redirect: 'follow'
             });
@@ -680,7 +592,7 @@
             if (r.status === 'success') {
                 showModal('success', "Image saved successfully!", { 'OK': { callback: async () => {
                     resetToSelection();
-                    await fetchStudents();
+                    await fetchStudents(); 
                 }}});
             } else throw new Error(r.message || "Unknown server error.");
         } catch (e) { showModal('error', `Upload failed: ${e.message}`); }
@@ -689,14 +601,16 @@
     retakeBtn.onclick = () => {
       photoPreview.classList.add('hidden'); uploadBtn.classList.add('hidden'); retakeBtn.classList.add('hidden');
       videoWrapper.classList.remove('hidden'); faceStatus.classList.remove('hidden');
-      stableFrames = 0;
+      stableFrames = 0; 
+      // MODIFIED: Restart camera in the previously selected mode
       startCamera(currentFacingMode, currentCameraMode);
     };
-
+    
     switchCameraBtn.onclick = () => startCamera(currentFacingMode === 'user' ? 'environment' : 'user', currentCameraMode);
     backBtn.onclick = () => resetToSelection();
     studentSearchInput.oninput = () => populateStudentList(studentSearchInput.value);
 
+    // New manual capture button event
     manualCaptureBtn.onclick = captureFace;
 
     const closeSidebar = () => { sidebar.classList.remove('is-open'); sidebarBackdrop.classList.add('hidden'); };
@@ -708,10 +622,10 @@
             e.preventDefault();
             navLinks.forEach(l => l.classList.remove('active'));
             pages.forEach(p => p.classList.add('hidden'));
-
+            
             link.classList.add('active');
             pages[index].classList.remove('hidden');
-
+            
             stopCamera();
             if (pages[index] === pageRecords) displaySavedRecords();
             if (pages[index] === pageList) displayStudentList();
